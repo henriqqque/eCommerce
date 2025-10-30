@@ -4,9 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.ufrn.imd</groupId>
-	<artifactId>eCommerce</artifactId>
-	<version>1.1-updated</version>
+	<artifactId>PauloHenriqueSantos</artifactId>
+	<version>1.0</version>
 	<packaging>jar</packaging>
+	<name>PauloHenriqueSantos</name>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
