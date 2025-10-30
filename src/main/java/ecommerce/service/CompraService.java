@@ -90,7 +90,6 @@ public class CompraService {
 			}
 		}
 
-
 		// 1. subtotal dos itens
 		BigDecimal subtotal = calcularSubtotal(carrinho);
 

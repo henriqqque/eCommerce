@@ -81,7 +81,6 @@ public class CompraServiceValorLimiteTest {
         CarrinhoDeCompras carrinho = criarCarrinho(criarItem(produto, 1));
 
         BigDecimal total = service.calcularCustoTotal(carrinho, Regiao.SUDESTE, TipoCliente.BRONZE);
-        // frete = 10 * 4 = 40 => total = 50.00
         assertThat(total).isEqualByComparingTo("30.00");
     }
 

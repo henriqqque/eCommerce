@@ -51,19 +51,10 @@ public class CompraServiceDecisaoTest {
         return carrinho;
     }
 
-    /*
-     * Esta tabela de decisão fictícia presume as seguintes regras combinadas para simplificar:
-     * - se subtotal > 1000, aplica desconto 20%
-     * - se tem produtos frágeis, taxa extra aplicada
-     * - cliente OURO tem frete zerado
-     * - região contempla multiplicador diferente
-     * As combinações de valores abaixo testam essas regras em conjunto.
-     */
-
     @DisplayName("Testes combinados das regras da tabela de decisão")
     @ParameterizedTest(name = "[{index}] subtotal={0}, fragil={1}, cliente={2}, regiao={3} -> total esperado {4}")
     @CsvSource({
-            "1200.00, false, OURO, SUDESTE, 960.00",   // subtotal > 1000, frete frete zerado ouro
+            "1200.00, false, OURO, SUDESTE, 960.00",   // subtotal, frete zerado ouro
             "1200.00, true, BRONZE, NORDESTE, 978.70", // fragil + desconto 20%, frete regio nordeste, cliente bronze
             "800.00, true, PRATA, SUL, 728.93",        // subtotal < 1000 sem desconto, fragil, cliente prata
             "400.00, false, BRONZE, SUDESTE, 412.00"   // sem desconto, sem fragil, cliente bronze, região sudeste
